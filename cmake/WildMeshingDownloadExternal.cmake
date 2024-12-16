@@ -33,15 +33,16 @@ endfunction()
 
 function(wildmeshing_download_tetwild)
     wildmeshing_download_project(tetwild
-        GIT_REPOSITORY  https://github.com/wildmeshing/fTetWild
-        GIT_TAG         f471f09dd26006745387dd61694762f861c787b9
+        # Download forked repository - including fixes in CMake
+        GIT_REPOSITORY https://github.com/cdaversin/fTetWild
+        GIT_TAG        1.0
     )
 endfunction()
 
 function(wildmeshing_download_pybind11)
     wildmeshing_download_project(pybind11
         GIT_REPOSITORY https://github.com/pybind/pybind11
-        GIT_TAG        085a29436a8c472caaaf7157aa644b571079bcaa
+        GIT_TAG        v2.13.0
     )
 endfunction()
 
