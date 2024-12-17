@@ -45,6 +45,7 @@ class CMakeBuild(build_ext):
         cfg = 'Debug' if self.debug else 'Release'
         build_args = ['--config', cfg]
         cmake_args += ['-DCMAKE_BUILD_TYPE=' + cfg]
+        cmake_args += ['-DCMAKE_CXX_FLAGS=-Wno-changes-meaning']
 
         if platform.system() == "Windows":
             cmake_args += [
@@ -66,7 +67,7 @@ class CMakeBuild(build_ext):
                               cmake_args, cwd=self.build_temp, env=env)
 
         subprocess.check_call(['cmake', '--build', '.'] +
-                              build_args, cwd=self.build_temp)
+                              build_args, cwd=self.build_temp, env=env)
 
         print()  # Add an empty line for cleaner output
 
