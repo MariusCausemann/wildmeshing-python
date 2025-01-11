@@ -85,6 +85,9 @@ set(MY_FLAGS
 
 		-Wno-sign-compare
 
+		# GCC > 10
+		-Wno-changes-meaning
+
 		###########
 		# GCC 6.1 #
 		###########
