@@ -26,11 +26,8 @@ endfunction()
 
 function(wildmeshing_download_triwild)
     wildmeshing_download_project(triwild
-        # GIT_REPOSITORY  https://github.com/wildmeshing/TriWild
-        # GIT_TAG         8e9e5ea25b11b346ddb8db8746174153259807d4
-        GIT_REPOSITORY https://github.com/cdaversin/TriWild
-        GIT_TAG        1.0
-
+        GIT_REPOSITORY  https://github.com/wildmeshing/TriWild
+        GIT_TAG         8e9e5ea25b11b346ddb8db8746174153259807d4
     )
 endfunction()
 
@@ -38,8 +35,7 @@ function(wildmeshing_download_tetwild)
     wildmeshing_download_project(tetwild
         # Download forked repository - including fixes in CMake
         GIT_REPOSITORY https://github.com/cdaversin/fTetWild	
-	#GIT_TAG        1.0
-        GIT_TAG        1.1
+	GIT_TAG        1.0
     )
 endfunction()
 
